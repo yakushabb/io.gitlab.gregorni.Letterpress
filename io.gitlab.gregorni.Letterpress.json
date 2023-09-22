@@ -74,7 +74,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/World/letterpress",
-                    "commit" : "4909bd333e4ca2b1814c595ad0bb54390349fc65"
+		    "tag" : "2.0"
+                    "commit" : "0d010a81debc03220e79d37a93d43e130a9eecab2b8d"
                 }
             ]
         }
