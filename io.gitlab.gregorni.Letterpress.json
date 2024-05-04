@@ -1,7 +1,7 @@
 {
     "app-id" : "io.gitlab.gregorni.Letterpress",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "45",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "letterpress",
     "finish-args" : [
@@ -30,24 +30,18 @@
 	  	{
 	      	    "type": "git",
 	      	    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-	      	    "tag": "v0.10.0",
-	      	    "commit": "2a39a16391122af2f3d812e478c1c1398c98b972"
+	      	    "tag": "v0.12.0"
 	    	}
 	    ]
 	},
         {
-            "name" : "jp2a",
-            "sources" : [
+            "name": "jp2a",
+            "buildsystem": "autotools",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/Talinx/jp2a.git",
-                    "commit" : "988ec7c519ed4b439c13358726559e53ebbdaf3c"
-                },
-                {
-                    "type" : "shell",
-                    "commands": [
-                        "autoreconf -vfi"
-                    ]
+                    "type": "git",
+                    "url": "https://github.com/Talinx/jp2a.git",
+                    "tag": "v1.2.0"
                 }
             ]
         },
@@ -61,8 +55,7 @@
 	      	{
 	            "type": "git",
 	            "url": "https://github.com/python-pillow/Pillow",
-	            "tag": "10.0.0",
-	            "commit": "6e28ed1f36d0eb74053af54e1eddc9c29db698cd"
+	            "tag": "10.3.0"
 	      	}
 	    ]
         },
@@ -70,12 +63,12 @@
             "name" : "letterpress",
             "builddir" : true,
             "buildsystem" : "meson",
+	    "run-tests" : true,
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/World/letterpress",
-		    "tag" : "2.0",
-                    "commit" : "f87ec635c64b8fdbb6dd60bb6f6d032a059d35ff"
+                    "url" : "https://gitlab.gnome.org/World/Letterpress",
+		    "tag" : "2.1"
                 }
             ]
         }
